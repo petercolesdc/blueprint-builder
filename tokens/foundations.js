@@ -37,7 +37,7 @@ module.exports = {
     18: { value: "162px", type: "dimension" },
   },
   // *****************************************************************
-  // TYPOGRAHPY
+  // TYPOGRAPHY
   // Typeface, weight and style values are inherited from primitives
   // Set type values that deal with leading (line-height),
   // tracking (letter spacing), and font size here.
