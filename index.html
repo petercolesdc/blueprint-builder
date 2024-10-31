@@ -1,0 +1,75 @@
+<!doctype html>
+<html class="eqx-reset" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic HTML with CSS</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="typefaces.css" />
+    <link rel="stylesheet" href="primitives.css" />
+    <link rel="stylesheet" href="foundations.css" />
+    <!-- Setup some testing paras to check against -->
+    <style>
+      body {
+        padding: var(--spacing-2);
+        font-family: var(--font-sans);
+      }
+      h1 {
+        font-weight: var(--font-weight-extrabold);
+        font-size: var(--text-xl);
+        line-height: var(--leading-tightest);
+        letter-spacing: var(--tracking-tight);
+        margin-bottom: var(--spacing-2);
+        font-feature-settings: var(--font-features);
+      }
+      strong {
+        font-weight: var(--font-weight-bold);
+      }
+      em {
+        font-style: italic;
+      }
+      p {
+        font-size: var(--text-base);
+        font-weight: var(--font-weight-light);
+        line-height: var(--leading-normal);
+      }
+      p + p {
+        margin-top: var(--spacing-2);
+      }
+      code {
+        font-size: var(--text-sm);
+        font-weight: var(--font-weight-normal);
+        line-height: var(--leading-normal);
+        font-family: var(--font-mono);
+        padding: var(--spacing-0-25) var(--spacing-0-5);
+        background-color: var(--indigo-100);
+        border-radius: var(--radius);
+        border: var(--stroke);
+        border-style: solid;
+        border-color: var(--indigo);
+      }
+      .container {
+        max-width: var(--screens-lg);
+        margin: 0 auto;
+      }
+      .num {
+        font-feature-settings: var(--font-features-numeric);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Heading one. Kinda big!</h1>
+      <p>
+        On December <span class="num">1st</span>,
+        <span class="num">2/5</span> of Christmas presents had been purchased.
+        Our Startup Partner Program is all about helping early stage companies
+        build a competitive advantage with infrastructure, and to grow faster.
+        <strong>The program</strong> is about more than
+        <em>just infrastructure</em>, it's about expertise, visibility, new
+        ideas, and access to customers and partners.
+      </p>
+      <p>Here's a little inline code <code>Token (hidden)</code></p>
+    </div>
+  </body>
+</html>

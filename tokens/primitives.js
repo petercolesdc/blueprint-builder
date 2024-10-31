@@ -124,7 +124,8 @@ module.exports = {
     lg: { value: "5px", type: "dimension" },
   },
   radius: {
-    "@": { value: "4px", type: "dimension" },
+    "@": { value: "2px", type: "dimension" },
+    xs: { value: "4px", type: "dimension" },
     sm: { value: "8px", type: "dimension" },
     md: { value: "16px", type: "dimension" },
     lg: { value: "32px", type: "dimension" },

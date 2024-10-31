@@ -21,6 +21,7 @@ module.exports = {
   // is rendered and whether it its additive or subtractive
   // *****************************************************************
   spacing: {
+    0.25: { value: "2px", type: "dimension" },
     0.5: { value: "4.5px", type: "dimension" },
     1: { value: "9px", type: "dimension" },
     2: { value: "18px", type: "dimension" },
