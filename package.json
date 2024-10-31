@@ -1,0 +1,20 @@
+{
+  "name": "Style dictionary token conversion",
+  "description": "Convert tokens declared in javascript and output to a selection of formats as variables",
+  "author": "Pete Coles for Equinix",
+  "license": "ISC",
+  "version": "1.0.0",
+  "scripts": {
+    "remove": "rm -rf build/",
+    "copyUtl": "cp -R ./utl/reset.css build/ && cp -R ./utl/index.html build/",
+    "build-primitives": "style-dictionary build --config ./build_primitives.js",
+    "build-foundations": "style-dictionary build --config ./build_foundations.js",
+    "build": "npm run build-primitives && npm run build-foundations && npm run copyUtl",
+    "build-scratch": "npm run remove && npm run build-primitives && npm run build-foundations && npm run copyUtl"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "style-dictionary": "^4.1.4",
+    "style-dictionary-utils": "^4.0.0"
+  }
+}
