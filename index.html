@@ -4,22 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Basic HTML with CSS</title>
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="typefaces.css" />
-    <link rel="stylesheet" href="primitives.css" />
-    <link rel="stylesheet" href="foundations.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+SC:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./build/reset.css" />
+    <link rel="stylesheet" href="./build/typefaces.css" />
+    <link rel="stylesheet" href="./build/primitives.css" />
+    <link rel="stylesheet" href="./build/foundations.css" />
     <!-- Setup some testing paras to check against -->
     <style>
-      body {
-        padding: var(--spacing-2);
+      :root {
+        padding: var(--spacing-5);
         font-family: var(--font-sans);
+        font-feature-settings: var(--font-features);
+        text-rendering: optimizeLegibility;
+        --bgCanvas: var(--neutral-100);
+        --textColor: var(--neutral-600);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bgCanvas: var(--neutral-black);
+          --textColor: var(--neutral-100);
+        }
+      }
+      body {
+        background: var(--bgCanvas);
+        color: var(--textColor);
       }
       h1 {
         font-weight: var(--font-weight-extrabold);
         font-size: var(--text-xl);
         line-height: var(--leading-tightest);
         letter-spacing: var(--tracking-tight);
-        margin-bottom: var(--spacing-2);
+        margin-bottom: var(--spacing-5);
+        font-feature-settings: var(--font-features);
+      }
+      h2 {
+        font-weight: var(--font-weight-bold);
+        font-size: var(--text-lg);
+        line-height: var(--leading-tightest);
+        letter-spacing: var(--tracking-tight);
+        margin-bottom: var(--spacing-5);
         font-feature-settings: var(--font-features);
       }
       strong {
@@ -33,20 +59,52 @@
         font-weight: var(--font-weight-light);
         line-height: var(--leading-normal);
       }
-      p + p {
-        margin-top: var(--spacing-2);
-      }
       code {
+        --textToken: var(--indigo-800);
+        --strokeToken: var(--indigo);
         font-size: var(--text-sm);
         font-weight: var(--font-weight-normal);
         line-height: var(--leading-normal);
         font-family: var(--font-mono);
-        padding: var(--spacing-0-25) var(--spacing-0-5);
+        padding: var(--spacing-1);
+        color: var(--textToken);
         background-color: var(--indigo-100);
         border-radius: var(--radius);
-        border: var(--stroke);
-        border-style: solid;
-        border-color: var(--indigo);
+        border: var(--stroke) solid var(--strokeToken);
+        text-align: center;
+      }
+      @media (prefers-color-scheme: dark) {
+        code {
+          --strokeToken: var(--indigo-100);
+        }
+      }
+      table {
+        --strokeTable: var(--indigo);
+        --bgTableHead: var(--indigo-100);
+        --textTableHead: var(--neutral-600);
+        border: var(--stroke) solid var(--strokeTable);
+        border-collapse: collapse;
+        table-layout: auto;
+        width: 100%;
+      }
+      th,
+      td {
+        text-align: left;
+        font-size: var(--text-sm);
+        line-height: var(--leading-none);
+        padding: var(--spacing-4);
+        border-bottom: var(--stroke) solid var(--strokeTable);
+        font-weight: var(--font-weight-normal);
+      }
+      th {
+        color: var(--textTableHead);
+        background: var(--bgTableHead);
+        font-weight: var(--font-weight-bold);
+      }
+      @media (prefers-color-scheme: dark) {
+        table {
+          --strokeTable: var(--indigo-100);
+        }
       }
       .container {
         max-width: var(--screens-lg);
@@ -55,13 +113,30 @@
       .num {
         font-feature-settings: var(--font-features-numeric);
       }
+      .ord {
+        font-feature-settings: var(--font-features-ordinal);
+      }
+      :where(.container) :where(p + p, p + div, p + h2, div + h2, div + div) {
+        margin-top: var(--spacing-7);
+      }
+      :where(.rtl) :where(h2, p) {
+        direction: rtl;
+      }
+      :where(.japanese) :where(p) {
+        font-family: var(--font-jp);
+        font-weight: var(--font-weight-normal);
+      }
+      :where(.chinese) :where(p) {
+        font-family: var(--font-ch);
+        font-weight: var(--font-weight-normal);
+      }
     </style>
   </head>
   <body>
     <div class="container">
       <h1>Heading one. Kinda big!</h1>
       <p>
-        On December <span class="num">1st</span>,
+        On December 2<span class="ord">nd</span>,
         <span class="num">2/5</span> of Christmas presents had been purchased.
         Our Startup Partner Program is all about helping early stage companies
         build a competitive advantage with infrastructure, and to grow faster.
@@ -70,6 +145,47 @@
         ideas, and access to customers and partners.
       </p>
       <p>Here's a little inline code <code>Token (hidden)</code></p>
+      <div class="table">
+        <h2>Table test</h2>
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Country</th>
+          </tr>
+          <tr>
+            <td>Harry Depp</td>
+            <td>28</td>
+            <td>Britain</td>
+          </tr>
+          <tr>
+            <td>John Smith</td>
+            <td>35</td>
+            <td>USA</td>
+          </tr>
+          <tr>
+            <td>Ram Krishna</td>
+            <td>19</td>
+            <td>Nepal</td>
+          </tr>
+        </table>
+      </div>
+      <h2>Japanese typeface test</h2>
+      <div class="japanese">
+        <p>
+          人類社会のすべての構成員の固有の尊厳と平等で譲ることのできない権利とを承認することは
+        </p>
+      </div>
+      <h2>Chinese typeface test</h2>
+      <div class="chinese">
+        <p>
+          鉴于对人类家庭所有成员的固有尊严及其平等的和不移的权利的承认,乃是世界自由、正义与和平的基础
+        </p>
+      </div>
+      <div class="rtl">
+        <h2>R to L languages</h2>
+        <p>هذه الفقرة باللغة العربية ، لذا يجب الانتقال من اليمين</p>
+      </div>
     </div>
   </body>
 </html>

@@ -90,6 +90,7 @@ html {
     scroll-behavior: auto !important;
   }
 }
+
 :not(:defined) {
   visibility: hidden;
 }

@@ -21,21 +21,15 @@ module.exports = {
   // is rendered and whether it its additive or subtractive
   // *****************************************************************
   spacing: {
-    0.25: { value: "2px", type: "dimension" },
-    0.5: { value: "4.5px", type: "dimension" },
-    1: { value: "9px", type: "dimension" },
-    2: { value: "18px", type: "dimension" },
-    2.5: { value: "22.5px", type: "dimension" },
-    3: { value: "27px", type: "dimension" },
-    4: { value: "36px", type: "dimension" },
-    5: { value: "45px", type: "dimension" },
-    6: { value: "54px", type: "dimension" },
-    7: { value: "63px", type: "dimension" },
-    10: { value: "90px", type: "dimension" },
-    12: { value: "108px", type: "dimension" },
-    14: { value: "126px", type: "dimension" },
-    16: { value: "144px", type: "dimension" },
-    18: { value: "162px", type: "dimension" },
+    0: { value: "0", type: "dimension" },
+    0.5: { value: "1px", type: "dimension" },
+    1: { value: "2px", type: "dimension" },
+    2: { value: "4px", type: "dimension" },
+    3: { value: "8px", type: "dimension" },
+    4: { value: "12px", type: "dimension" },
+    5: { value: "16px", type: "dimension" },
+    6: { value: "20px", type: "dimension" },
+    7: { value: "28px", type: "dimension" },
   },
   // *****************************************************************
   // TYPOGRAPHY
@@ -62,5 +56,26 @@ module.exports = {
     lg: { value: "clamp(1.375rem, 1.0789rem + 1.4803vw, 2.5rem)" },
     xl: { value: "clamp(2.875rem, 2.7763rem + 0.4934vw, 3.25rem)" },
     "2xl": { value: "clamp(4.25rem, 3.9704rem + 1.398vw, 5.3125rem)" },
+  },
+  // *****************************************************************
+  // DEPTH
+  // Z-index values
+  // *****************************************************************
+  depth: {
+    "@": { value: "0" },
+    10: { value: "10" },
+    20: { value: "20" },
+    30: { value: "30" },
+    40: { value: "40" },
+    50: { value: "50" },
+    diminished: { value: "-1" },
+  },
+  // *****************************************************************
+  // Transitions
+  // Set durations and easing for animation
+  // *****************************************************************
+  transition: {
+    quickly: { value: "0.05s ease" },
+    slowly: { value: "0.02s ease" },
   },
 };

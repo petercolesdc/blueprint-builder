@@ -6,7 +6,7 @@
   "version": "1.0.0",
   "scripts": {
     "remove": "rm -rf build/",
-    "copyUtl": "cp -R ./utl/ build/ && cp -R ./index.html build/ && cp -R ./fonts/ build/fonts/",
+    "copyUtl": "cp -R ./utl/ build/ && build/ && cp -R ./fonts/ build/fonts/",
     "build-primitives": "style-dictionary build --config ./build_primitives.js",
     "build-foundations": "style-dictionary build --config ./build_foundations.js",
     "build": "npm run build-primitives && npm run build-foundations && npm run copyUtl",

@@ -90,6 +90,7 @@ module.exports = {
   // at foundation level per application as required
   // *****************************************************************
   font: {
+    // For western, (Latin, Cyrillic, Greek) languages
     sans: {
       type: "fontFamily",
       value: ["NexaText", "ui-sans-serif", "system-ui", "sans-serif"],
@@ -97,6 +98,18 @@ module.exports = {
     mono: {
       type: "fontFamily",
       value: ["Hack", "ui-monospace", "SFMono-Regular", "monospace"],
+    },
+    // Simplified Chinese language alternative
+    // Use with Google Fonts CDN - https://fonts.google.com/noto/specimen/Noto+Sans+SC
+    sc: {
+      type: "fontFamily",
+      value: ["Noto Sans SC", "ui-sans-serif", "system-ui", "sans-serif"],
+    },
+    // Japanese language alternative
+    // Use with Google Fonts CDN - https://fonts.google.com/noto/specimen/Noto+Sans+JP
+    jp: {
+      type: "fontFamily",
+      value: ["Noto Sans JP", "ui-sans-serif", "system-ui", "sans-serif"],
     },
   },
   fontWeight: {
@@ -107,10 +120,13 @@ module.exports = {
   },
   fontFeatures: {
     "@": {
-      value: "'kern' 1, 'calt' 1, 'zero' 1, 'locl' 1, 'liga' 1",
+      value: "'kern', 'calt'",
     },
     numeric: {
-      value: "'kern' 1, 'tnum' 1, 'zero' 1, 'ordn' 1, 'frac' 1",
+      value: "'kern', 'calt', 'frac'",
+    },
+    tabular: {
+      value: "'kern', 'calt', 'zero', 'frac', 'tnum'",
     },
   },
   // *****************************************************************
@@ -130,26 +146,5 @@ module.exports = {
     md: { value: "16px", type: "dimension" },
     lg: { value: "32px", type: "dimension" },
     full: { value: "9999px", type: "dimension" },
-  },
-  // *****************************************************************
-  // DEPTH
-  // Z-index elevation values
-  // *****************************************************************
-  elevation: {
-    "@": { value: "0" },
-    10: { value: "10" },
-    20: { value: "20" },
-    30: { value: "30" },
-    40: { value: "40" },
-    50: { value: "50" },
-    diminished: { value: "-1" },
-  },
-  // *****************************************************************
-  // Transitions
-  // Set durations and easing for animation
-  // *****************************************************************
-  transition: {
-    quickly: { value: "0.05s ease" },
-    slowly: { value: "0.02s ease" },
   },
 };
