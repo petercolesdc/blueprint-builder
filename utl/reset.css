@@ -72,7 +72,7 @@ html {
   margin: 0;
   padding: 0;
 }
-:where(.eqx-reset) :where(img, picture) {
+:where(.eqx-reset) :where(img, picture, video, iframe) {
   max-inline-size: 100%;
   display: block;
 }

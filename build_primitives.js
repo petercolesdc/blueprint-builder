@@ -1,5 +1,5 @@
 module.exports = {
-  source: ["tokens/primitives.js"],
+  source: ["tokens/primitives.json"],
   platforms: {
     css: {
       transformGroup: "css",
@@ -55,8 +55,8 @@ module.exports = {
         },
       ],
     },
-    json: {
-      transformGroup: "web",
+    js: {
+      transformGroup: "js",
       transforms: [
         "size/pxToRem",
         "fontFamily/css",
@@ -67,8 +67,8 @@ module.exports = {
       buildPath: "build/",
       files: [
         {
-          destination: "primitives.json",
-          format: "json/flat",
+          destination: "primitives.js",
+          format: "javascript/module-flat",
           filter: (token) => !token.private,
         },
       ],

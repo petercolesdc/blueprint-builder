@@ -1,5 +1,5 @@
 module.exports = {
-  source: ["tokens/foundations.js"],
+  source: ["tokens/foundations.json"],
   platforms: {
     css: {
       transformGroup: "css",
@@ -55,8 +55,8 @@ module.exports = {
         },
       ],
     },
-    json: {
-      transformGroup: "web",
+    js: {
+      transformGroup: "js",
       transforms: [
         "size/pxToRem",
         "fontFamily/css",
@@ -67,8 +67,8 @@ module.exports = {
       buildPath: "build/",
       files: [
         {
-          destination: "foundations.json",
-          format: "json/flat",
+          destination: "foundations.js",
+          format: "javascript/module-flat",
           filter: (token) => !token.private,
         },
       ],

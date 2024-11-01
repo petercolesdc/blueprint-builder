@@ -15,26 +15,26 @@
     <!-- Setup some testing paras to check against -->
     <style>
       :root {
-        padding: var(--spacing-5);
-        font-family: var(--font-sans);
-        font-feature-settings: var(--font-features);
-        text-rendering: optimizeLegibility;
-        --bgCanvas: var(--neutral-100);
-        --textColor: var(--neutral-600);
+        --bgCanvas: var(--color-neutral-white);
+        --textColor: var(--color-neutral-600);
       }
       @media (prefers-color-scheme: dark) {
         :root {
-          --bgCanvas: var(--neutral-black);
-          --textColor: var(--neutral-100);
+          --bgCanvas: var(--color-neutral-black);
+          --textColor: var(--color-neutral-100);
         }
       }
       body {
+        padding: var(--spacing-5);
+        font-family: var(--font-sans);
+        font-feature-settings: var(--font-features);
         background: var(--bgCanvas);
         color: var(--textColor);
+        text-rendering: optimizeLegibility;
       }
       h1 {
         font-weight: var(--font-weight-extrabold);
-        font-size: var(--text-xl);
+        font-size: var(--text-3xl);
         line-height: var(--leading-tightest);
         letter-spacing: var(--tracking-tight);
         margin-bottom: var(--spacing-5);
@@ -42,9 +42,22 @@
       }
       h2 {
         font-weight: var(--font-weight-bold);
-        font-size: var(--text-lg);
+        font-size: var(--text-xl);
         line-height: var(--leading-tightest);
-        letter-spacing: var(--tracking-tight);
+        margin-bottom: var(--spacing-5);
+        font-feature-settings: var(--font-features);
+      }
+      h3 {
+        font-weight: var(--font-weight-bold);
+        font-size: var(--text-lg);
+        line-height: var(--leading-tight);
+        margin-bottom: var(--spacing-5);
+        font-feature-settings: var(--font-features);
+      }
+      h4 {
+        font-weight: var(--font-weight-bold);
+        font-size: var(--text-base);
+        line-height: var(--leading-tight);
         margin-bottom: var(--spacing-5);
         font-feature-settings: var(--font-features);
       }
@@ -59,16 +72,31 @@
         font-weight: var(--font-weight-light);
         line-height: var(--leading-normal);
       }
-      code {
-        --textToken: var(--indigo-800);
-        --strokeToken: var(--indigo);
+      p.large {
+        font-size: var(--text-lg);
+        font-weight: var(--font-weight-light);
+        line-height: var(--leading-normal);
+      }
+      p. p.small {
         font-size: var(--text-sm);
         font-weight: var(--font-weight-normal);
         line-height: var(--leading-normal);
+      }
+      p.xsmall {
+        font-size: var(--text-xs);
+        font-weight: var(--font-weight-normal);
+        line-height: var(--leading-normal);
+      }
+      code {
+        --textToken: var(--color-indigo-800);
+        --strokeToken: var(--color-indigo);
+        font-size: var(--text-xs);
+        font-weight: var(--font-weight-normal);
+        line-height: var(--leading-normal);
         font-family: var(--font-mono);
-        padding: var(--spacing-1);
+        padding: var(--spacing-2);
         color: var(--textToken);
-        background-color: var(--indigo-100);
+        background: var(--gradient-1);
         border-radius: var(--radius);
         border: var(--stroke) solid var(--strokeToken);
         text-align: center;
@@ -79,9 +107,9 @@
         }
       }
       table {
-        --strokeTable: var(--indigo);
-        --bgTableHead: var(--indigo-100);
-        --textTableHead: var(--neutral-600);
+        --strokeTable: var(--color-indigo);
+        --bgTableHead: var(--color-indigo-100);
+        --textTableHead: var(--color-neutral-600);
         border: var(--stroke) solid var(--strokeTable);
         border-collapse: collapse;
         table-layout: auto;
@@ -103,8 +131,12 @@
       }
       @media (prefers-color-scheme: dark) {
         table {
-          --strokeTable: var(--indigo-100);
+          --strokeTable: var(--color-indigo-100);
         }
+      }
+      iframe {
+        aspect-ratio: 16/9;
+        width: 100%;
       }
       .container {
         max-width: var(--screens-lg);
@@ -116,7 +148,23 @@
       .ord {
         font-feature-settings: var(--font-features-ordinal);
       }
-      :where(.container) :where(p + p, p + div, p + h2, div + h2, div + div) {
+      :where(.container)
+        :where(
+          p + p,
+          p + div,
+          p + h2,
+          div + h2,
+          p + h3,
+          div + h3,
+          p + h4,
+          div + h4,
+          p + h5,
+          div + h5,
+          p + h6,
+          div + h6,
+          div + div,
+          p + iframe
+        ) {
         margin-top: var(--spacing-7);
       }
       :where(.rtl) :where(h2, p) {
@@ -134,7 +182,17 @@
   </head>
   <body>
     <div class="container">
-      <h1>Heading one. Kinda big!</h1>
+      <h1>Largest heading and text size</h1>
+      <p class="large">
+        On December 2<span class="ord">nd</span>,
+        <span class="num">2/5</span> of Christmas presents had been purchased.
+        Our Startup Partner Program is all about helping early stage companies
+        build a competitive advantage with infrastructure, and to grow faster.
+        <strong>The program</strong> is about more than
+        <em>just infrastructure</em>, it's about expertise, visibility, new
+        ideas, and access to customers and partners.
+      </p>
+      <h2>Example of standard text and level two heading</h2>
       <p>
         On December 2<span class="ord">nd</span>,
         <span class="num">2/5</span> of Christmas presents had been purchased.
@@ -144,7 +202,28 @@
         <em>just infrastructure</em>, it's about expertise, visibility, new
         ideas, and access to customers and partners.
       </p>
+      <h3>Example of small text and level three heading</h3>
+      <p class="small">
+        On December 2<span class="ord">nd</span>,
+        <span class="num">2/5</span> of Christmas presents had been purchased.
+        Our Startup Partner Program is all about helping early stage companies
+        build a competitive advantage with infrastructure, and to grow faster.
+        <strong>The program</strong> is about more than
+        <em>just infrastructure</em>, it's about expertise, visibility, new
+        ideas, and access to customers and partners.
+      </p>
+      <h4>Example of smallest text and heading size</h4>
+      <p class="xsmall">
+        On December 2<span class="ord">nd</span>,
+        <span class="num">2/5</span> of Christmas presents had been purchased.
+        Our Startup Partner Program is all about helping early stage companies
+        build a competitive advantage with infrastructure, and to grow faster.
+        <strong>The program</strong> is about more than
+        <em>just infrastructure</em>, it's about expertise, visibility, new
+        ideas, and access to customers and partners.
+      </p>
       <p>Here's a little inline code <code>Token (hidden)</code></p>
+
       <div class="table">
         <h2>Table test</h2>
         <table>
@@ -185,6 +264,21 @@
       <div class="rtl">
         <h2>R to L languages</h2>
         <p>هذه الفقرة باللغة العربية ، لذا يجب الانتقال من اليمين</p>
+      </div>
+      <div>
+        <h2>Aspect ratio test</h2>
+        <p>
+          In order for this to work with iframe, width and height need to be
+          removed from the provided code.
+        </p>
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=yK3rKy8yLF3w4X5I"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
   </body>

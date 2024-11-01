@@ -1,0 +1,86 @@
+{
+  "screens": {
+    "xs": { "value": "320px", "type": "dimension" },
+    "sm": { "value": "640px", "type": "dimension" },
+    "md": { "value": "768px", "type": "dimension" },
+    "lg": { "value": "1024px", "type": "dimension" },
+    "xl": { "value": "1280px", "type": "dimension" },
+    "2xl": { "value": "1536px", "type": "dimension" },
+    "3xl": { "value": "1800px", "type": "dimension" }
+  },
+  "spacing": {
+    "0": { "value": "0", "type": "dimension" },
+    "1": { "value": "1px", "type": "dimension" },
+    "2": { "value": "4px", "type": "dimension" },
+    "3": { "value": "8px", "type": "dimension" },
+    "4": { "value": "12px", "type": "dimension" },
+    "5": { "value": "16px", "type": "dimension" },
+    "6": { "value": "20px", "type": "dimension" },
+    "7": { "value": "28px", "type": "dimension" }
+  },
+  "leading": {
+    "none": { "value": "100%" },
+    "tightest": { "value": "120%" },
+    "tight": { "value": "130%" },
+    "normal": { "value": "140%" }
+  },
+  "tracking": {
+    "normal": { "value": "0", "type": "dimension" },
+    "tight": { "value": "-1px", "type": "dimension" },
+    "wide": { "value": "1px", "type": "dimension" },
+    "xwide": { "value": "1.5px", "type": "dimension" }
+  },
+  "typescale": {
+    "0": { "value": "12px", "type": "dimension", "private": true },
+    "1": { "value": "14px", "type": "dimension", "private": true },
+    "2": { "value": "16px", "type": "dimension", "private": true },
+    "3": { "value": "20px", "type": "dimension", "private": true },
+    "4": { "value": "24px", "type": "dimension", "private": true },
+    "5": { "value": "32px", "type": "dimension", "private": true },
+    "6": { "value": "40px", "type": "dimension", "private": true },
+    "7": { "value": "56px", "type": "dimension", "private": true }
+  },
+  "vwModifier": {
+    "sm": { "value": "0.135vw", "private": true },
+    "base": { "value": "0.2703vw", "private": true },
+    "lg": { "value": "0.5405vw", "private": true },
+    "xl": { "value": "1.0811vw", "private": true },
+    "2xl": { "value": "0.5405vw", "private": true }
+  },
+  "text": {
+    "xs": {
+      "value": "clamp({typescale.0}, {typescale.0} + {vwModifier.sm}, {typescale.2})"
+    },
+    "sm": {
+      "value": "clamp({typescale.1}, {typescale.1} + {vwModifier.sm} {typescale.2})"
+    },
+    "base": {
+      "value": "clamp({typescale.2}, {typescale.2} + {vwModifier.base}, {typescale.3})"
+    },
+    "lg": {
+      "value": "clamp({typescale.3}, {typescale.3} + {vwModifier.base}, {typescale.4})"
+    },
+    "xl": {
+      "value": "clamp({typescale.4}, {typescale.4} + {vwModifier.lg}, {typescale.5})"
+    },
+    "2xl": {
+      "value": "clamp({typescale.5}, {typescale.5} + {vwModifier.xl}, {typescale.6})"
+    },
+    "3xl": {
+      "value": "clamp({typescale.6}, {typescale.6} + {vwModifier.2xl}, {typescale.7})"
+    }
+  },
+  "depth": {
+    "@": { "value": "0" },
+    "10": { "value": "10" },
+    "20": { "value": "20" },
+    "30": { "value": "30" },
+    "40": { "value": "40" },
+    "50": { "value": "50" },
+    "diminished": { "value": "-1" }
+  },
+  "transition": {
+    "quickly": { "value": "0.05s ease", "type": "duration" },
+    "slowly": { "value": "0.02s ease", "type": "duration" }
+  }
+}
