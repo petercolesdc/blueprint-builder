@@ -19,10 +19,10 @@
     "7": { "value": "28px", "type": "dimension" }
   },
   "leading": {
-    "none": { "value": "100%" },
-    "tightest": { "value": "120%" },
-    "tight": { "value": "130%" },
-    "normal": { "value": "140%" }
+    "none": { "value": "1" },
+    "tightest": { "value": "1.2" },
+    "tight": { "value": "1.3" },
+    "normal": { "value": "1.4" }
   },
   "tracking": {
     "normal": { "value": "0", "type": "dimension" },
@@ -31,43 +31,45 @@
     "xwide": { "value": "1.5px", "type": "dimension" }
   },
   "typescale": {
-    "0": { "value": "12px", "type": "dimension", "private": true },
-    "1": { "value": "14px", "type": "dimension", "private": true },
-    "2": { "value": "16px", "type": "dimension", "private": true },
-    "3": { "value": "20px", "type": "dimension", "private": true },
-    "4": { "value": "24px", "type": "dimension", "private": true },
-    "5": { "value": "32px", "type": "dimension", "private": true },
-    "6": { "value": "40px", "type": "dimension", "private": true },
-    "7": { "value": "56px", "type": "dimension", "private": true }
+    "xxs": { "value": "12px", "type": "dimension", "private": true },
+    "xs": { "value": "14px", "type": "dimension", "private": true },
+    "sm": { "value": "16px", "type": "dimension", "private": true },
+    "base": { "value": "20px", "type": "dimension", "private": true },
+    "lg": { "value": "24px", "type": "dimension", "private": true },
+    "xl": { "value": "32px", "type": "dimension", "private": true },
+    "2xl": { "value": "40px", "type": "dimension", "private": true },
+    "3xl": { "value": "56px", "type": "dimension", "private": true }
   },
-  "vwModifier": {
+  "vw": {
+    "xs": { "value": "0.135vw", "private": true },
     "sm": { "value": "0.135vw", "private": true },
     "base": { "value": "0.2703vw", "private": true },
     "lg": { "value": "0.5405vw", "private": true },
     "xl": { "value": "1.0811vw", "private": true },
-    "2xl": { "value": "0.5405vw", "private": true }
+    "2xl": { "value": "0.5405vw", "private": true },
+    "3xl": { "value": "0.5405vw", "private": true }
   },
   "text": {
     "xs": {
-      "value": "clamp({typescale.0}, {typescale.0} + {vwModifier.sm}, {typescale.2})"
+      "value": "clamp({typescale.xxs}, {typescale.xxs} + {vw.xs}, {typescale.xs})"
     },
     "sm": {
-      "value": "clamp({typescale.1}, {typescale.1} + {vwModifier.sm} {typescale.2})"
+      "value": "clamp({typescale.xs}, {typescale.xs} + {vw.sm} {typescale.sm})"
     },
     "base": {
-      "value": "clamp({typescale.2}, {typescale.2} + {vwModifier.base}, {typescale.3})"
+      "value": "clamp({typescale.sm}, {typescale.sm} + {vw.base}, {typescale.base})"
     },
     "lg": {
-      "value": "clamp({typescale.3}, {typescale.3} + {vwModifier.base}, {typescale.4})"
+      "value": "clamp({typescale.base}, {typescale.base} + {vw.lg}, {typescale.lg})"
     },
     "xl": {
-      "value": "clamp({typescale.4}, {typescale.4} + {vwModifier.lg}, {typescale.5})"
+      "value": "clamp({typescale.lg}, {typescale.lg} + {vw.xl}, {typescale.xl})"
     },
     "2xl": {
-      "value": "clamp({typescale.5}, {typescale.5} + {vwModifier.xl}, {typescale.6})"
+      "value": "clamp({typescale.xl}, {typescale.xl} + {vw.2xl}, {typescale.2xl})"
     },
     "3xl": {
-      "value": "clamp({typescale.6}, {typescale.6} + {vwModifier.2xl}, {typescale.7})"
+      "value": "clamp({typescale.2xl}, {typescale.2xl} + {vw.3xl}, {typescale.3xl})"
     }
   },
   "depth": {
