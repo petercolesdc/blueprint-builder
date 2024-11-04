@@ -19,10 +19,10 @@
     "7": { "value": "28px", "type": "dimension" }
   },
   "leading": {
-    "none": { "value": "1" },
-    "tightest": { "value": "1.2" },
-    "tight": { "value": "1.3" },
-    "normal": { "value": "1.4" }
+    "none": { "value": "100%" },
+    "tightest": { "value": "120%" },
+    "tight": { "value": "130%" },
+    "normal": { "value": "140%" }
   },
   "tracking": {
     "normal": { "value": "0", "type": "dimension" },

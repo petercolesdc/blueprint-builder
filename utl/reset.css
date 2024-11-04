@@ -8,11 +8,11 @@ html {
 :not(:defined) {
   visibility: hidden;
 }
-:where(.eqx-reset) :where(*, ::before, ::after) {
+:where(.reset) :where(*, ::before, ::after) {
   box-sizing: border-box;
 }
-:where(.eqx-reset),
-:where(.eqx-reset)
+:where(.reset),
+:where(.reset)
   :where(
     body,
     div,
@@ -72,18 +72,18 @@ html {
   margin: 0;
   padding: 0;
 }
-:where(.eqx-reset) :where(img, picture, video, iframe) {
+:where(.reset) :where(img, picture, video, iframe) {
   max-inline-size: 100%;
   display: block;
 }
-:where(.eqx-reset) :where(input, button, textarea, select) {
+:where(.reset) :where(input, button, textarea, select) {
   font-family: inherit;
   font-feature-settings: inherit;
   -webkit-appearance: none;
   appearance: none;
 }
 @media (prefers-reduced-motion: reduce) {
-  :where(.eqx-reset) :where(*, ::before, ::after) {
+  :where(.reset) :where(*, ::before, ::after) {
     animation-duration: 0s !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0s !important;
