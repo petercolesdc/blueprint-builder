@@ -1,115 +1,148 @@
 {
   "screens": {
-    "xs": { "value": "320px", "type": "dimension" },
-    "sm": { "value": "640px", "type": "dimension" },
-    "md": { "value": "768px", "type": "dimension" },
-    "lg": { "value": "1024px", "type": "dimension" },
-    "xl": { "value": "1280px", "type": "dimension" },
-    "2xl": { "value": "1536px", "type": "dimension" },
-    "3xl": { "value": "1800px", "type": "dimension" }
+    "xs": { "$value": "320px", "$type": "dimension" },
+    "sm": { "$value": "640px", "$type": "dimension" },
+    "md": { "$value": "768px", "$type": "dimension" },
+    "lg": { "$value": "1024px", "$type": "dimension" },
+    "xl": { "$value": "1280px", "$type": "dimension" },
+    "2xl": { "$value": "1536px", "$type": "dimension" },
+    "3xl": { "$value": "1800px", "$type": "dimension" },
+    "container": { "$value": "1400px", "$type": "dimension" }
   },
   "spacing": {
-    "0": { "value": "0", "type": "dimension" },
-    "px": { "value": "1px", "type": "dimension" },
-    "0.5": { "value": "2px", "type": "dimension" },
-    "1": { "value": "4px", "type": "dimension" },
-    "1.5": { "value": "6px", "type": "dimension" },
-    "2": { "value": "8px", "type": "dimension" },
-    "2.5": { "value": "10px", "type": "dimension" },
-    "3": { "value": "12px", "type": "dimension" },
-    "3.5": { "value": "14px", "type": "dimension" },
-    "4": { "value": "16px", "type": "dimension" },
-    "5": { "value": "20px", "type": "dimension" },
-    "6": { "value": "24px", "type": "dimension" },
-    "7": { "value": "28px", "type": "dimension" },
-    "8": { "value": "32px", "type": "dimension" },
-    "9": { "value": "36px", "type": "dimension" },
-    "10": { "value": "40px", "type": "dimension" },
-    "11": { "value": "44px", "type": "dimension" },
-    "12": { "value": "48px", "type": "dimension" },
-    "14": { "value": "56px", "type": "dimension" },
-    "16": { "value": "64px", "type": "dimension" },
-    "20": { "value": "80px", "type": "dimension" },
-    "24": { "value": "96px", "type": "dimension" },
-    "28": { "value": "112px", "type": "dimension" },
-    "32": { "value": "128px", "type": "dimension" },
-    "36": { "value": "144px", "type": "dimension" },
-    "40": { "value": "160px", "type": "dimension" },
-    "44": { "value": "176px", "type": "dimension" },
-    "48": { "value": "192px", "type": "dimension" },
-    "52": { "value": "208px", "type": "dimension" },
-    "56": { "value": "224px", "type": "dimension" },
-    "60": { "value": "240px", "type": "dimension" },
-    "64": { "value": "256px", "type": "dimension" },
-    "72": { "value": "288px", "type": "dimension" },
-    "80": { "value": "320px", "type": "dimension" },
-    "96": { "value": "384px", "type": "dimension" }
+    "0": { "$value": "0", "$type": "dimension" },
+    "px": { "$value": "1px", "$type": "dimension" },
+    "0-5": { "$value": "2px", "$type": "dimension" },
+    "1": { "$value": "4px", "$type": "dimension" },
+    "1-5": { "$value": "6px", "$type": "dimension" },
+    "2": { "$value": "8px", "$type": "dimension" },
+    "2.5": { "$value": "10px", "$type": "dimension" },
+    "3": { "$value": "12px", "$type": "dimension" },
+    "3-5": { "$value": "14px", "$type": "dimension" },
+    "4": { "$value": "16px", "$type": "dimension" },
+    "5": { "$value": "20px", "$type": "dimension" },
+    "6": { "$value": "24px", "$type": "dimension" },
+    "7": { "$value": "28px", "$type": "dimension" },
+    "8": { "$value": "32px", "$type": "dimension" },
+    "9": { "$value": "36px", "$type": "dimension" },
+    "10": { "$value": "40px", "$type": "dimension" },
+    "11": { "$value": "44px", "$type": "dimension" },
+    "12": { "$value": "48px", "$type": "dimension" },
+    "14": { "$value": "56px", "$type": "dimension" },
+    "16": { "$value": "64px", "$type": "dimension" },
+    "20": { "$value": "80px", "$type": "dimension" },
+    "24": { "$value": "96px", "$type": "dimension" },
+    "28": { "$value": "112px", "$type": "dimension" },
+    "32": { "$value": "128px", "$type": "dimension" },
+    "36": { "$value": "144px", "$type": "dimension" },
+    "40": { "$value": "160px", "$type": "dimension" },
+    "44": { "$value": "176px", "$type": "dimension" },
+    "48": { "$value": "192px", "$type": "dimension" },
+    "52": { "$value": "208px", "$type": "dimension" },
+    "56": { "$value": "224px", "$type": "dimension" },
+    "60": { "$value": "240px", "$type": "dimension" },
+    "64": { "$value": "256px", "$type": "dimension" },
+    "72": { "$value": "288px", "$type": "dimension" },
+    "80": { "$value": "320px", "$type": "dimension" },
+    "96": { "$value": "384px", "$type": "dimension" }
   },
   "leading": {
-    "none": { "value": "100%" },
-    "tightest": { "value": "120%" },
-    "tight": { "value": "130%" },
-    "normal": { "value": "140%" }
+    "none": { "$value": "1" },
+    "tightest": { "$value": "1.2" },
+    "tight": { "$value": "1.3" },
+    "normal": { "$value": "1.4" }
   },
   "tracking": {
-    "normal": { "value": "0", "type": "dimension" },
-    "tight": { "value": "-1px", "type": "dimension" },
-    "wide": { "value": "1px", "type": "dimension" },
-    "xwide": { "value": "1.5px", "type": "dimension" }
-  },
-  "typescale": {
-    "xxs": { "value": "12px", "type": "dimension", "private": true },
-    "xs": { "value": "14px", "type": "dimension", "private": true },
-    "sm": { "value": "16px", "type": "dimension", "private": true },
-    "base": { "value": "20px", "type": "dimension", "private": true },
-    "lg": { "value": "24px", "type": "dimension", "private": true },
-    "xl": { "value": "32px", "type": "dimension", "private": true },
-    "2xl": { "value": "40px", "type": "dimension", "private": true },
-    "3xl": { "value": "56px", "type": "dimension", "private": true }
-  },
-  "vw": {
-    "xs": { "value": "0.135vw", "private": true },
-    "sm": { "value": "0.135vw", "private": true },
-    "base": { "value": "0.2703vw", "private": true },
-    "lg": { "value": "0.5405vw", "private": true },
-    "xl": { "value": "1.0811vw", "private": true },
-    "2xl": { "value": "0.5405vw", "private": true },
-    "3xl": { "value": "0.5405vw", "private": true }
+    "normal": { "$value": "0", "$type": "dimension" },
+    "tight": { "$value": "-1px", "$type": "dimension" },
+    "wide": { "$value": "1px", "$type": "dimension" },
+    "xwide": { "$value": "1.5px", "$type": "dimension" }
   },
   "text": {
-    "xs": {
-      "value": "clamp({typescale.xxs}, {typescale.xxs} + {vw.xs}, {typescale.xs})"
-    },
-    "sm": {
-      "value": "clamp({typescale.xs}, {typescale.xs} + {vw.sm} {typescale.sm})"
-    },
-    "base": {
-      "value": "clamp({typescale.sm}, {typescale.sm} + {vw.base}, {typescale.base})"
-    },
-    "lg": {
-      "value": "clamp({typescale.base}, {typescale.base} + {vw.lg}, {typescale.lg})"
-    },
-    "xl": {
-      "value": "clamp({typescale.lg}, {typescale.lg} + {vw.xl}, {typescale.xl})"
-    },
-    "2xl": {
-      "value": "clamp({typescale.xl}, {typescale.xl} + {vw.2xl}, {typescale.2xl})"
-    },
-    "3xl": {
-      "value": "clamp({typescale.2xl}, {typescale.2xl} + {vw.3xl}, {typescale.3xl})"
-    }
+    "xxs": { "$value": "11px", "$type": "dimension" },
+    "xs": { "$value": "12px", "$type": "dimension" },
+    "sm": { "$value": "14px", "$type": "dimension" },
+    "base": { "$value": "16px", "$type": "dimension" },
+    "md": { "$value": "20px", "$type": "dimension" },
+    "lg": { "$value": "24px", "$type": "dimension" },
+    "xl": { "$value": "32px", "$type": "dimension" },
+    "2xl": { "$value": "40px", "$type": "dimension" },
+    "3xl": { "$value": "56px", "$type": "dimension" }
+  },
+  "stroke": {
+    "@": { "$value": "1px", "$type": "dimension" },
+    "sm": { "$value": "2px", "$type": "dimension" },
+    "md": { "$value": "3px", "$type": "dimension" },
+    "lg": { "$value": "5px", "$type": "dimension" }
+  },
+  "radius": {
+    "@": { "$value": "2px", "$type": "borderRadius" },
+    "xs": { "$value": "4px", "$type": "borderRadius" },
+    "sm": { "$value": "8px", "$type": "borderRadius" },
+    "md": { "$value": "16px", "$type": "borderRadius" },
+    "lg": { "$value": "32px", "$type": "borderRadius" },
+    "full": { "$value": "9999px", "$type": "borderRadius" }
   },
   "depth": {
-    "@": { "value": "0" },
-    "1": { "value": "10" },
-    "2": { "value": "20" },
-    "3": { "value": "30" },
-    "4": { "value": "40" },
-    "5": { "value": "50" },
-    "diminished": { "value": "-1" }
+    "0": { "$value": "0" },
+    "1": { "$value": "10" },
+    "2": { "$value": "20" },
+    "3": { "$value": "30" },
+    "4": { "$value": "40" },
+    "5": { "$value": "50" },
+    "6": { "$value": "50" },
+    "7": { "$value": "70" },
+    "8": { "$value": "80" },
+    "9": { "$value": "90" },
+    "10": { "$value": "100" },
+    "persist": { "$value": "1000" },
+    "diminished": { "$value": "-1" }
   },
   "transition": {
-    "quickly": { "value": "0.05s ease", "type": "duration" },
-    "slowly": { "value": "0.2s ease", "type": "duration" }
+    "@": { "$value": "0.5s", "$type": "duration" },
+    "quickly": { "$value": "0.25s", "$type": "duration" },
+    "slowly": { "$value": "0.75s", "$type": "duration" }
+  },
+  "easing": {
+    "linear": {
+      "$value": "linear",
+      "$type": "easing"
+    },
+    "easeIn": {
+      "$value": "ease-in",
+      "$type": "easing"
+    },
+    "easeOut": {
+      "$value": "ease-out",
+      "$type": "easing"
+    },
+    "easeInOut": {
+      "$value": "ease-in-out",
+      "$type": "easing"
+    },
+    "easeInQuad": {
+      "$value": "cubic-bezier(0.55, 0.085, 0.68, 0.53)",
+      "$type": "easing"
+    },
+    "easeOutQuad": {
+      "$value": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+      "$type": "easing"
+    },
+    "easeInOutQuad": {
+      "$value": "cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+      "$type": "easing"
+    },
+    "easeInCubic": {
+      "$value": "cubic-bezier(0.55, 0.055, 0.675, 0.19)",
+      "$type": "easing"
+    },
+    "easeOutCubic": {
+      "$value": "cubic-bezier(0.215, 0.61, 0.355, 1)",
+      "$type": "easing"
+    },
+    "easeInOutCubic": {
+      "$value": "cubic-bezier(0.645, 0.045, 0.355, 1)",
+      "$type": "easing"
+    }
   }
 }

@@ -26,7 +26,7 @@
       }
       body {
         padding: var(--spacing-5);
-        font-family: var(--font-sans);
+        font-family: var(--font-familiy-sans);
         font-feature-settings: var(--font-features);
         background: var(--bgCanvas);
         color: var(--textColor);
@@ -92,7 +92,7 @@
         font-size: var(--text-base);
         font-weight: var(--font-weight-normal);
         line-height: var(--leading-tight);
-        font-family: var(--font-mono);
+        font-family: var(--font-familiy-mono);
         padding: var(--spacing-5);
         color: var(--color-neutral-white);
         background: var(--color-neutral-black);
@@ -109,8 +109,8 @@
         }
       }
       table {
-        --strokeTable: var(--color-indigo);
-        --bgTableHead: var(--color-indigo-100);
+        --strokeTable: var(--color-violet);
+        --bgTableHead: var(--color-violet-100);
         --textTableHead: var(--color-neutral-600);
         border: var(--stroke) solid var(--strokeTable);
         border-collapse: collapse;
@@ -133,7 +133,7 @@
       }
       @media (prefers-color-scheme: dark) {
         table {
-          --strokeTable: var(--color-indigo-100);
+          --strokeTable: var(--color-violet-100);
         }
       }
       iframe {
@@ -155,7 +155,9 @@
         margin: 0 auto;
       }
       .num {
-        font-feature-settings: var(--font-features-numeric);
+        font-feature-settings:
+          "pnum" 1,
+          "frac" 1;
       }
       :where(.container)
         :where(
@@ -184,11 +186,11 @@
         direction: rtl;
       }
       :where(.japanese) :where(p) {
-        font-family: var(--font-jp);
+        font-family: var(--font-familiy-jp);
         font-weight: var(--font-weight-normal);
       }
       :where(.chinese) :where(p) {
-        font-family: var(--font-ch);
+        font-family: var(--font-familiy-ch);
         font-weight: var(--font-weight-normal);
       }
     </style>
